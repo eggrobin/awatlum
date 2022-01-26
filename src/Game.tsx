@@ -145,7 +145,7 @@ function Game(props: GameProps) {
         return;
       }
       if (!dictionary.includes(currentGuess)) {
-        setHint("Not a valid word");
+        setHint("Not in wordlist");
         return;
       }
       for (const g of guesses) {

@@ -125,7 +125,7 @@ function App() {
               >
                 {
                   [
-                    `Guesses must be valid dictionary words.`,
+                    `Guesses must be in the wordlist.`,
                     `Wordle's "Hard Mode". Green letters must stay fixed, and yellow letters must be reused.`,
                     `An even stricter Hard Mode. Yellow letters must move away from where they were clued, and gray clues must be obeyed.`,
                   ][difficulty]

@@ -9,10 +9,14 @@ cmu = json.load(open("./cmu.json"))
 for entry in cmu:
     for j,pron in enumerate(cmu[entry]):
         cmu[entry][j] = cmu[entry][j].replace("ː", "").replace("ˈ", "").replace("ˌ","").replace("r", "ɹ").replace("ɝ", "ɚ")
+
+        if cmu[entry][j] == "mɛɹoʊ":
+            print(entry)
         for char in cmu[entry][j]:
             if char not in keyboard:
                 print(f"Found untypeable character {char}")
                 sys.exit(0)
+
         
 # print(cmu)
 old_dictionary = json.load(open("../old-dictionary.json"))
