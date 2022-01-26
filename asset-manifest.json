@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.bcaaa1dc.css",
-    "main.js": "/static/js/main.386a86c6.js",
-    "index.html": "/index.html",
-    "main.bcaaa1dc.css.map": "/static/css/main.bcaaa1dc.css.map",
-    "main.386a86c6.js.map": "/static/js/main.386a86c6.js.map"
+    "main.css": "/manishearth.github.io/ipadle/static/css/main.94d10b2c.css",
+    "main.js": "/manishearth.github.io/ipadle/static/js/main.d292d8cb.js",
+    "index.html": "/manishearth.github.io/ipadle/index.html",
+    "main.94d10b2c.css.map": "/manishearth.github.io/ipadle/static/css/main.94d10b2c.css.map",
+    "main.d292d8cb.js.map": "/manishearth.github.io/ipadle/static/js/main.d292d8cb.js.map"
   },
   "entrypoints": [
-    "static/css/main.bcaaa1dc.css",
-    "static/js/main.386a86c6.js"
+    "static/css/main.94d10b2c.css",
+    "static/js/main.d292d8cb.js"
   ]
 }
