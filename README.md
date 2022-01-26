@@ -1,7 +1,9 @@
-# hello wordl
-It's [Wordle](https://www.powerlanguage.co.uk/wordle/) but you can play forever!
+# ipadle
+It's [Wordle](https://www.powerlanguage.co.uk/wordle/) but for IPA!
 
-Play it [**here**](https://hellowordl.net/).
+Based on https://github.com/lynn/hello-wordl
+
+Play it [**here**](https://manishearth.github.io/ipadle/).
 
 ## Introduction
 Wordle is a word game similar to the TV show [Lingo](https://en.wikipedia.org/wiki/Lingo_(British_game_show)).
