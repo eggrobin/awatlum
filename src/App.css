@@ -23,7 +23,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-transform: uppercase;
   font-weight: bold;
 }
 
@@ -86,7 +85,6 @@ table.Game-rows > tbody {
   margin: 2px;
   background-color: #cdcdcd;
   padding: 2px;
-  text-transform: capitalize;
   border-radius: 4px;
   min-height: 40px;
   display: flex;

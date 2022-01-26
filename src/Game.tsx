@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Row, RowState } from "./Row";
 import dictionary from "./dictionary.json";
 import { Clue, clue, describeClue, violation } from "./clue";
-import { Keyboard } from "./Keyboard";
+import { Keyboard, ALL_LETTERS } from "./Keyboard";
 import targetList from "./targets.json";
 import {
   dictionarySet,
@@ -129,7 +129,8 @@ function Game(props: GameProps) {
       return;
     }
     if (guesses.length === props.maxGuesses) return;
-    if (/^[a-z]$/i.test(key)) {
+
+    if (ALL_LETTERS.indexOf(key) !== -1) {
       setCurrentGuess((guess) =>
         (guess + key.toLowerCase()).slice(0, wordLength)
       );

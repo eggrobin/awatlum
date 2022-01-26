@@ -4,17 +4,20 @@ interface KeyboardProps {
   letterInfo: Map<string, Clue>;
   onKey: (key: string) => void;
 }
+const KEYBOARD = [
+  "q w e r t y ŋ u i o p".split(" "),
+  "a s d f g h j k l".split(" "),
+  "Backspace z x c v b n m Enter".split(" "),
+];
+
+export const ALL_LETTERS = KEYBOARD.flat().filter(letter => letter != "Backspace" && letter != "Enter");
 
 export function Keyboard(props: KeyboardProps) {
-  const keyboard = [
-    "q w e r t y u i o p".split(" "),
-    "a s d f g h j k l".split(" "),
-    "Backspace z x c v b n m Enter".split(" "),
-  ];
+
 
   return (
     <div className="Game-keyboard" aria-hidden="true">
-      {keyboard.map((row, i) => (
+      {KEYBOARD.map((row, i) => (
         <div key={i} className="Game-keyboard-row">
           {row.map((label, j) => {
             let className = "Game-keyboard-button";
