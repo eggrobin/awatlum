@@ -2,11 +2,13 @@ import { Clue } from "./clue";
 import { Row, RowState } from "./Row";
 import { maxGuesses } from "./util";
 
+export const appName = document.title;
+
 export function About() {
   return (
     <div className="App-about">
       <p>
-        <i>wɚdəl</i> is a IPA-based remake of the word game{" "}
+        <i>{appName}</i> is a IPA-based remake of the word game{" "}
         <a href="https://www.powerlanguage.co.uk/wordle/">
           <i>Wordle</i>
         </a>{" "}
@@ -14,7 +16,7 @@ export function About() {
 
         This implementation is largely based on <a href="https://github.com/lynn">@chordbug</a>'s <a href="https://github.com/lynn/hello-wordl">hello-wordl</a>.<br/><br/>
 
-        Instead of guessing words based on their English spelling, in <i>wɚdəl</i> you guess words based on their pronunciation in North American English.
+        Instead of guessing words based on their English spelling, in <i>{appName}</i> you guess words based on their pronunciation in North American English.
         Pronunciations have been taken from the <a href="http://www.speech.cs.cmu.edu/cgi-bin/cmudict">CMU Pronouncing Dictionary</a> and may not match your exact dialect.
         Certain phonological features like aspiration are not represented here to make it easier; whatever phonemes are available on the keyboard are the ones that this game accepts.
       </p>

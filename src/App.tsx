@@ -2,7 +2,7 @@ import "./App.css";
 import { maxGuesses, seed } from "./util";
 import Game from "./Game";
 import { useEffect, useState } from "react";
-import { About } from "./About";
+import { About, appName } from "./About";
 
 function useSetting<T>(
   key: string,
@@ -58,7 +58,7 @@ function App() {
   return (
     <div className="App-container">
       <h1>
-        wɚdəl
+        {appName}
       </h1>
       <div className="top-right">
         {page !== "game" ? (
