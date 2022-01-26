@@ -160,7 +160,7 @@ function Game(props: GameProps) {
       setCurrentGuess((guess) => "");
 
       const gameOver = (verbed: string) =>
-        `You ${verbed}! The answer was ${target.toUpperCase()}. (Enter to ${
+        `You ${verbed}! The answer was ${target}. (Enter to ${
           challenge ? "play a random game" : "play again"
         })`;
 
@@ -255,7 +255,7 @@ function Game(props: GameProps) {
           disabled={gameState !== GameState.Playing || guesses.length === 0}
           onClick={() => {
             setHint(
-              `The answer was ${target.toUpperCase()}. (Enter to play again)`
+              `The answer was ${target}. (Enter to play again)`
             );
             setGameState(GameState.Lost);
             (document.activeElement as HTMLElement)?.blur();

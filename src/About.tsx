@@ -25,39 +25,39 @@ export function About() {
         rowState={RowState.LockedIn}
         wordLength={4}
         cluedLetters={[
-          { clue: Clue.Absent, letter: "w" },
-          { clue: Clue.Absent, letter: "o" },
-          { clue: Clue.Correct, letter: "r" },
-          { clue: Clue.Elsewhere, letter: "d" },
+          { clue: Clue.Correct, letter: "p" },
+          { clue: Clue.Elsewhere, letter: "ɪ" },
+          { clue: Clue.Absent, letter: "ŋ" },
+          { clue: Clue.Absent, letter: "z" },
         ]}
       />
       <p>
-        <b>W</b> and <b>O</b> aren't in the target word at all.
+        <b>ŋ</b> and <b>z</b> aren't in the target word at all.
       </p>
       <p>
-        <b className="green-bg">R</b> is correct! The third letter is{" "}
-        <b className="green-bg">R</b>
+        <b className="green-bg">p</b> is correct! The first letter is{" "}
+        <b className="green-bg">p</b>
         .<br />
-        <strong>(There may still be a second R in the word.)</strong>
+        <strong>(There may still be a second p in the word.)</strong>
       </p>
       <p>
-        <b className="yellow-bg">D</b> occurs <em>elsewhere</em> in the target
+        <b className="yellow-bg">ɪ</b> occurs <em>elsewhere</em> in the target
         word.
         <br />
         <strong>(Perhaps more than once. 🤔)</strong>
       </p>
       <hr />
       <p>
-        Let's move the <b>D</b> in our next guess:
+        Let's move the <b>ɪ</b> in our next guess:
       </p>
       <Row
         rowState={RowState.LockedIn}
         wordLength={4}
         cluedLetters={[
-          { clue: Clue.Correct, letter: "d" },
-          { clue: Clue.Correct, letter: "a" },
-          { clue: Clue.Correct, letter: "r" },
-          { clue: Clue.Absent, letter: "k" },
+          { clue: Clue.Correct, letter: "p" },
+          { clue: Clue.Correct, letter: "e" },
+          { clue: Clue.Correct, letter: "ɪ" },
+          { clue: Clue.Absent, letter: "n" },
         ]}
         annotation={"So close!"}
       />
@@ -65,10 +65,10 @@ export function About() {
         rowState={RowState.LockedIn}
         wordLength={4}
         cluedLetters={[
-          { clue: Clue.Correct, letter: "d" },
-          { clue: Clue.Correct, letter: "a" },
-          { clue: Clue.Correct, letter: "r" },
-          { clue: Clue.Correct, letter: "t" },
+          { clue: Clue.Correct, letter: "p" },
+          { clue: Clue.Correct, letter: "e" },
+          { clue: Clue.Correct, letter: "ɪ" },
+          { clue: Clue.Correct, letter: "l" },
         ]}
         annotation={"Got it!"}
       />
