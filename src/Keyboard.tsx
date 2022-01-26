@@ -5,9 +5,10 @@ interface KeyboardProps {
   onKey: (key: string) => void;
 }
 const KEYBOARD = [
-  "q w e r t y ŋ u i o p".split(" "),
-  "a s d f g h j k l".split(" "),
-  "Backspace z x c v b n m Enter".split(" "),
+  "i ɪ e ɛ æ a ʌ ə ɚ ɑ o ɔ ʊ u".split(" "),
+  "p b t d k g m n ŋ".split(" "),
+  "f v θ ð s z ʃ ʒ x h".split(" "),
+  "Backspace l ɹ j w Enter".split(" "),
 ];
 
 export const ALL_LETTERS = KEYBOARD.flat().filter(letter => letter != "Backspace" && letter != "Enter");
