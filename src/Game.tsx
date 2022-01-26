@@ -27,7 +27,7 @@ interface GameProps {
   difficulty: Difficulty;
 }
 
-const targets = targetList.slice(0, targetList.indexOf("murky") + 1); // Words no rarer than this one
+const targets = targetList.slice(0, targetList.indexOf("mɚki") + 1); // Words no rarer than this one
 const minWordLength = 4;
 const maxWordLength = 11;
 
