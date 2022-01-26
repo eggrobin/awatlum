@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ipadle/static/css/main.94d10b2c.css",
-    "main.js": "/ipadle/static/js/main.8e0e880a.js",
+    "main.js": "/ipadle/static/js/main.eeca4227.js",
     "index.html": "/ipadle/index.html",
     "main.94d10b2c.css.map": "/ipadle/static/css/main.94d10b2c.css.map",
-    "main.8e0e880a.js.map": "/ipadle/static/js/main.8e0e880a.js.map"
+    "main.eeca4227.js.map": "/ipadle/static/js/main.eeca4227.js.map"
   },
   "entrypoints": [
     "static/css/main.94d10b2c.css",
-    "static/js/main.8e0e880a.js"
+    "static/js/main.eeca4227.js"
   ]
 }
