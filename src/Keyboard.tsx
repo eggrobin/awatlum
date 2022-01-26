@@ -1,17 +1,18 @@
 import { Clue, clueClass } from "./clue";
 
+import rawKeyboard from "./keyboard.json";
+
 interface KeyboardProps {
   letterInfo: Map<string, Clue>;
   onKey: (key: string) => void;
 }
-const KEYBOARD = [
-  "i ɪ e ɛ æ a ʌ ə ɚ ɑ o ɔ ʊ u".split(" "),
-  "p b t d k g m n ŋ".split(" "),
-  "f v θ ð s z ʃ ʒ x h".split(" "),
-  "Backspace l ɹ j w Enter".split(" "),
-];
 
-export const ALL_LETTERS = KEYBOARD.flat().filter(letter => letter != "Backspace" && letter != "Enter");
+const KEYBOARD = rawKeyboard.map((k) => k.split(" "));
+export const ALL_LETTERS = KEYBOARD.flat();
+
+KEYBOARD[KEYBOARD.length - 1].splice(0, 0, "Backspace");
+KEYBOARD[KEYBOARD.length - 1].push("Enter");
+
 
 export function Keyboard(props: KeyboardProps) {
 
