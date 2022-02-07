@@ -78,7 +78,7 @@ export function violation(
     const nth = ordinal(i + 1);
 
     // Hard: enforce greens stay in place.
-    if (clue === Clue.Correct && guess[i] !== letter) {
+    if (clue === Clue.Correct && Array.from(guess)[i] !== letter) {
       return nth + " sign must be " + glyph;
     }
 
@@ -90,7 +90,7 @@ export function violation(
     }
 
     // Ultra Hard: disallow would-be greens.
-    if (ultra && clue !== Clue.Correct && guess[i] === letter) {
+    if (ultra && clue !== Clue.Correct && Array.from(guess)[i] === letter) {
       return nth + " sign can't be " + glyph;
     }
 
