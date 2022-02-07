@@ -19,8 +19,9 @@ export function About() {
 
         We thank <a href="https://twitter.com/Zaikarion">𒁹𒍣𒊬</a> and <a href="https://twitter.com/ManishEarth">𒎙𒎙</a> for their advice.
         <hr/>
-        * A random spelling is chosen when the page is reloaded; this is inspired by
-        <a href="https://github.com/Manishearth/ipadle/commit/5a66e111b7fa3ff4912bac5c7e329f9021c1f8c9">a similar feature in /wɚdəl/, alias [wɚdl̩]</a>.
+        * A random spelling is chosen when the page is reloaded; this is inspired by <a href="https://github.com/Manishearth/ipadle/commit/5a66e111b7fa3ff4912bac5c7e329f9021c1f8c9">a similar feature in /wɚdəl/, alias [wɚdl̩]</a>.
+        <hr />
+        <hr />
       </p>
       <p>
         You get {maxGuesses} tries to guess a target word.
