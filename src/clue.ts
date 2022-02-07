@@ -79,7 +79,7 @@ export function violation(
 
     // Hard: enforce greens stay in place.
     if (clue === Clue.Correct && guess[i] !== letter) {
-      return nth + " letter must be " + glyph;
+      return nth + " sign must be " + glyph;
     }
 
     // Hard: enforce yellows are used.
@@ -91,7 +91,7 @@ export function violation(
 
     // Ultra Hard: disallow would-be greens.
     if (ultra && clue !== Clue.Correct && guess[i] === letter) {
-      return nth + " letter can't be " + glyph;
+      return nth + " sign can't be " + glyph;
     }
 
     // Ultra Hard: if the exact amount is known because of an Absent clue, enforce it.

@@ -1,6 +1,14 @@
 [
-    "i ɪ e ɛ æ a ʌ ə ɚ ɑ o ɔ ʊ u",
-    "p b t d k g m n ŋ",
-    "f v θ ð s z ʃ ʒ h",
-    "l ɹ j w"
+  "𒀀 𒁀 𒁕 𒂵 𒄩 𒅗 𒆷 𒈠 𒈾 𒉺 𒋡 𒊏 𒊓 𒍝 𒊭 𒋫 X 𒉿 𒍝",
+  "𒂊 𒁁 X X X X 𒇷 𒈨 X X X 𒊑 X 𒍢 𒊺 𒋼 𒋼 X X",
+  "𒄿 𒉈 𒁲 X 𒄭 𒆠 𒇷 𒈪 𒉌 𒁉 𒆠 𒊑 X X 𒅆 𒋾 X 𒉿 𒍣",
+  "𒌑 𒁍 𒁺 X 𒄷 𒆪 𒇻 𒈬 𒉡 𒁍 𒆪 𒊒 𒋢 𒍪 𒋗 𒌅 𒌅 X 𒍪",
+  "𒀀 𒀊 𒀜 X 𒄴 𒀝 𒀠 𒄠 𒀭 𒀊 𒀝 𒅈 X X 𒀸 𒀜 X X X",
+  "𒂊 X X X X X 𒂖 𒅎 X X X 𒅕 X X X X X X X",
+  "𒄿 𒅁 𒀉 X X 𒅅 𒅋 𒅎 𒅔 𒅁 𒅅 𒅕 X X 𒅖 𒀉 X X X",
+  "𒌑 𒌒 X X X X 𒌌 𒌝 𒌦 X X 𒌨 X X 𒍑 𒌓 X X X",
+  "𒅀 X X X X 𒄰 𒇴 X 𒉆 X X X X X 𒊬 𒌓 X X X",
+  "X X X X X 𒄣 𒅆 X 𒉏 X X X X X 𒋳 𒁴 X X X",
+  "X X X X X X 𒈝 X X X X X X X X 𒌈 X X X",
+  "X X X X X X X X X X X X X X X 𒁾 X X X"
 ]

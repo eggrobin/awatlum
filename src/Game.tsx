@@ -27,9 +27,9 @@ interface GameProps {
   difficulty: Difficulty;
 }
 
-const targets = targetList.slice(0, targetList.indexOf("mɚki") + 1); // Words no rarer than this one
-const minWordLength = 4;
-const maxWordLength = 11;
+const targets = targetList.slice(0, targetList.indexOf("𒊭𒆷𒅆𒋗") + 1); // Words no rarer than this one
+const minWordLength = 3;
+const maxWordLength = 5;
 
 function randomTarget(wordLength: number): string {
   const eligible = targets.filter((word) => Array.from(word).length === wordLength);
@@ -73,7 +73,7 @@ function Game(props: GameProps) {
   );
   const [challenge, setChallenge] = useState<string>(initChallenge);
   const [wordLength, setWordLength] = useState(
-    challenge ? Array.from(challenge).length : 5
+    challenge ? Array.from(challenge).length : 4
   );
   const [target, setTarget] = useState(() => {
     resetRng();
@@ -88,7 +88,7 @@ function Game(props: GameProps) {
     }
     setChallenge("");
     const newWordLength =
-      wordLength < minWordLength || wordLength > maxWordLength ? 5 : wordLength;
+      wordLength < minWordLength || wordLength > maxWordLength ? 4 : wordLength;
     setWordLength(newWordLength);
     setTarget(randomTarget(newWordLength));
     setGuesses([]);
@@ -227,7 +227,7 @@ function Game(props: GameProps) {
   return (
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
       <div className="Game-options">
-        <label htmlFor="wordLength">Letters:</label>
+        <label htmlFor="wordLength">Signs:</label>
         <input
           type="range"
           min={minWordLength}
@@ -247,7 +247,7 @@ function Game(props: GameProps) {
             setCurrentGuess("");
             setTarget(randomTarget(length));
             setWordLength(length);
-            setHint(`${length} letters`);
+            setHint(`${length} signs`);
           }}
         ></input>
         <button
