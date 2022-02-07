@@ -14,13 +14,13 @@ export interface CluedLetter {
 export function clue(word: string, target: string): CluedLetter[] {
   let elusive: string[] = [];
   Array.from(target).forEach((letter, i) => {
-    if (word[i] !== letter) {
+    if (Array.from(word)[i] !== letter) {
       elusive.push(letter);
     }
   });
   return Array.from(word).map((letter, i) => {
     let j: number;
-    if (target[i] === letter) {
+    if (Array.from(target)[i] === letter) {
       return { clue: Clue.Correct, letter };
     } else if ((j = elusive.indexOf(letter)) > -1) {
       // "use it up" so we don't clue at it twice
