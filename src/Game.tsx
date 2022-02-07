@@ -193,7 +193,9 @@ function Game(props: GameProps) {
   }, [currentGuess, gameState]);
 
   let letterInfo = new Map<string, Clue>();
-  const tableRows = Array(props.maxGuesses)
+  let rows_shown = Math.min(props.maxGuesses,
+                            guesses.length + (currentGuess === "" ? 1 : 2))
+  const tableRows = Array(rows_shown)
     .fill(undefined)
     .map((_, i) => {
       const guess = [...guesses, currentGuess][i] ?? "";

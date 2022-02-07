@@ -6,7 +6,7 @@ export enum Difficulty {
   UltraHard,
 }
 
-export const maxGuesses = 7;
+export const maxGuesses = 12;
 
 export const dictionarySet: Set<string> = new Set(dictionary);
 
