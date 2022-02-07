@@ -1,9 +1,18 @@
-# ipadle
-It's [Wordle](https://www.powerlanguage.co.uk/wordle/) but for IPA!
+﻿# 𒀀𒉿𒀜𒈝
+It’s [Wordle](https://www.powerlanguage.co.uk/wordle/) but for Old Babylonian Akkadian!
 
-Based on https://github.com/lynn/hello-wordl
+Based on https://github.com/manishearth/ipadle, in turn based on https://github.com/lynn/hello-wordl.
 
-Play it [**here**](https://manishearth.github.io/ipadle/).
+Play it [**here**](https://eggrobin.github.io/awatlum/).
+
+## Corpus
+
+The word list was compiled from the Old Babylonian Akkadian texts found in the corpus of the [Cuneiform Digital Library Initiative](https://cdli.ucla.edu/).
+Sumerograms, single-sign words (e.g. 𒅇), as well as words containing determinatives were discarded.
+From that corpus, the words that could be expressed using the 111 most common sign values (corresponding to 86 signs) make up the guessable word list.
+The target word is always a word that appears at least ten times within the corpus.
+
+Note that this means the target word will often be inflected in some fashion (including with pronominal suffixes).
 
 ## Introduction
 Wordle is a word game similar to the TV show [Lingo](https://en.wikipedia.org/wiki/Lingo_(British_game_show)).
@@ -22,8 +31,3 @@ Don't get me wrong: I, too, think this is the most brilliant aspect of Wordle, a
 
 ## My word contained two of the same letter!
 This can happen in Wordle too, and I give clues exactly the same way Wordle does. I think the game would be too easy if I got rid of double letters, so I won't.
-
-## Where are the words coming from?
-To generate target words, I have been manually curating the top 25,000 or so entries of [Peter Norvig's English word frequency list](http://norvig.com/mayzner.html) to get rid of obscure words, plurals, conjugated verbs, inappropriate language, and British spellings (sorry). If you get dealt a strange target word, please open an issue on this here GitHub repository.
-
-To check guesses, I use some variation of the _Official Tournament and Club Word List_ used in North American Scrabble tournaments. (I'm not a native English speaker, but my English tends mostly American.)
