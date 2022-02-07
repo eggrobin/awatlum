@@ -8,14 +8,19 @@ export function About() {
   return (
     <div className="App-about">
       <p>
-        <i>{appName}</i> is an (Old Babylonian) Akkadian remake of the word game{" "}
+        {appName}* is an (Old Babylonian) Akkadian remake of the word game{" "}
         <a href="https://www.powerlanguage.co.uk/wordle/">
           <i>Wordle</i>
         </a>{" "}
         by <a href="https://twitter.com/powerlanguish">powerlanguage</a>.<br/><br/>
 
         This implementation is largely based on <a href="https://github.com/manishearth">@manishearth</a>'s <a href="https://github.com/manishearth/ipadle">/wɚdəl/</a>,
-        in turn largely based on <a href="https://github.com/lynn">@chordbug</a>'s <a href="https://github.com/lynn/hello-wordl">hello-wordl</a>.<br/><br/>
+        in turn largely based on <a href="https://github.com/lynn">@chordbug</a>'s <a href="https://github.com/lynn/hello-wordl">hello-wordl</a>.<br /><br />
+
+        We thank <a href="https://twitter.com/Zaikarion">𒁹𒍣𒊬</a> and <a href="https://twitter.com/ManishEarth">𒎙𒎙</a> for their advice.
+        <hr/>
+        * A random spelling is chosen when the page is reloaded; this is inspired by
+        <a href="https://github.com/Manishearth/ipadle/commit/5a66e111b7fa3ff4912bac5c7e329f9021c1f8c9">a similar feature in /wɚdəl/, alias [wɚdl̩]</a>.
       </p>
       <p>
         You get {maxGuesses} tries to guess a target word.
