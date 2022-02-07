@@ -32,7 +32,7 @@ const minWordLength = 4;
 const maxWordLength = 11;
 
 function randomTarget(wordLength: number): string {
-  const eligible = targets.filter((word) => word.length === wordLength);
+  const eligible = targets.filter((word) => Array.from(word).length === wordLength);
   let candidate: string;
   do {
     candidate = pick(eligible);
@@ -73,7 +73,7 @@ function Game(props: GameProps) {
   );
   const [challenge, setChallenge] = useState<string>(initChallenge);
   const [wordLength, setWordLength] = useState(
-    challenge ? challenge.length : 5
+    challenge ? Array.from(challenge).length : 5
   );
   const [target, setTarget] = useState(() => {
     resetRng();
@@ -132,15 +132,15 @@ function Game(props: GameProps) {
 
     if (ALL_LETTERS.indexOf(key) !== -1) {
       setCurrentGuess((guess) =>
-        (guess + key.toLowerCase()).slice(0, wordLength)
+        Array.from(guess + key.toLowerCase()).slice(0, wordLength).join("")
       );
       tableRef.current?.focus();
       setHint("");
     } else if (key === "Backspace") {
-      setCurrentGuess((guess) => guess.slice(0, -1));
+      setCurrentGuess((guess) => Array.from(guess).slice(0, -1).join(""));
       setHint("");
     } else if (key === "Enter") {
-      if (currentGuess.length !== wordLength) {
+      if (Array.from(currentGuess).length !== wordLength) {
         setHint("Too short");
         return;
       }

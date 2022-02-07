@@ -27,7 +27,7 @@ export function Keyboard(props: KeyboardProps) {
             if (clue !== undefined) {
               className += " " + clueClass(clue);
             }
-            if (label.length > 1) {
+            if (Array.from(label).length > 1) {
               className += " Game-keyboard-button-wide";
             }
             return (

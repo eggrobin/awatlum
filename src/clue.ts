@@ -13,12 +13,12 @@ export interface CluedLetter {
 
 export function clue(word: string, target: string): CluedLetter[] {
   let elusive: string[] = [];
-  target.split("").forEach((letter, i) => {
+  Array.from(target).forEach((letter, i) => {
     if (word[i] !== letter) {
       elusive.push(letter);
     }
   });
-  return word.split("").map((letter, i) => {
+  return Array.from(word).map((letter, i) => {
     let j: number;
     if (target[i] === letter) {
       return { clue: Clue.Correct, letter };
