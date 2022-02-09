@@ -143,29 +143,6 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="Settings-setting">
-            <label htmlFor="keyboard-setting">Keyboard layout:</label>
-            <select
-              name="keyboard-setting"
-              id="keyboard-setting"
-              value={keyboard}
-              onChange={(e) => setKeyboard(e.target.value)}
-            >
-              <option value="qwertyuiop-asdfghjkl-BzxcvbnmE">QWERTY</option>
-              <option value="azertyuiop-qsdfghjklm-BwxcvbnE">AZERTY</option>
-              <option value="qwertzuiop-asdfghjkl-ByxcvbnmE">QWERTZ</option>
-              <option value="BpyfgcrlE-aoeuidhtns-qjkxbmwvz">Dvorak</option>
-              <option value="qwfpgjluy-arstdhneio-BzxcvbkmE">Colemak</option>
-            </select>
-            <input
-              style={{ marginLeft: 20 }}
-              id="enter-left-setting"
-              type="checkbox"
-              checked={enterLeft}
-              onChange={() => setEnterLeft((x: boolean) => !x)}
-            />
-            <label htmlFor="enter-left-setting">"Enter" on left side</label>
-          </div>
         </div>
       )}
       <Game
