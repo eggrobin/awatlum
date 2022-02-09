@@ -1,5 +1,5 @@
 import "./App.css";
-import { maxGuesses, seed } from "./util";
+import { maxGuesses, seed, urlParam } from "./util";
 import Game from "./Game";
 import { useEffect, useState } from "react";
 import { About, appName } from "./About";
@@ -26,6 +26,8 @@ function useSetting<T>(
   return [current, setSetting];
 }
 
+const todaySeed = new Date().toISOString().replace(/-/g, "").slice(0, 8);
+
 function App() {
   type Page = "game" | "about" | "settings";
   const [page, setPage] = useState<Page>("game");
@@ -33,10 +35,19 @@ function App() {
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [dark, setDark] = useSetting<boolean>("dark", prefersDark);
+  const [colorBlind, setColorBlind] = useSetting<boolean>("colorblind", false);
   const [difficulty, setDifficulty] = useSetting<number>("difficulty", 0);
+  const [keyboard, setKeyboard] = useSetting<string>(
+    "keyboard",
+    "qwertyuiop-asdfghjkl-BzxcvbnmE"
+  );
+  const [enterLeft, setEnterLeft] = useSetting<boolean>("enter-left", false);
 
   useEffect(() => {
     document.body.className = dark ? "dark" : "";
+    if (urlParam("today") !== null || urlParam("todas") !== null) {
+      document.location = "?seed=" + todaySeed;
+    }
     setTimeout(() => {
       // Avoid transition on page load
       document.body.style.transition = "0.3s background-color ease-out";
@@ -44,19 +55,18 @@ function App() {
   }, [dark]);
 
   const link = (emoji: string, label: string, page: Page) => (
-    <a
+    <button
       className="emoji-link"
-      href="#"
       onClick={() => setPage(page)}
       title={label}
       aria-label={label}
     >
       {emoji}
-    </a>
+    </button>
   );
 
   return (
-    <div className="App-container">
+    <div className={"App-container" + (colorBlind ? " color-blind" : "")}>
       <h1>
         {appName}
       </h1>
@@ -78,15 +88,7 @@ function App() {
           visibility: page === "game" ? "visible" : "hidden",
         }}
       >
-        <a
-          href="#"
-          onClick={() =>
-            (document.location = seed
-              ? "?"
-              : "?seed=" +
-                new Date().toISOString().replace(/-/g, "").slice(0, 8))
-          }
-        >
+        <a href={seed ? "?random" : "?seed=" + todaySeed}>
           {seed ? "Random" : "Today's"}
         </a>
       </div>
@@ -104,6 +106,15 @@ function App() {
           </div>
           <div className="Settings-setting">
             <input
+              id="colorblind-setting"
+              type="checkbox"
+              checked={colorBlind}
+              onChange={() => setColorBlind((x: boolean) => !x)}
+            />
+            <label htmlFor="colorblind-setting">Color blind mode</label>
+          </div>
+          <div className="Settings-setting">
+            <input
               id="difficulty-setting"
               type="range"
               min="0"
@@ -113,7 +124,6 @@ function App() {
             />
             <div>
               <label htmlFor="difficulty-setting">Difficulty:</label>
-              &nbsp;
               <strong>{["Normal", "Hard", "Ultra Hard"][difficulty]}</strong>
               <div
                 style={{
@@ -133,12 +143,40 @@ function App() {
               </div>
             </div>
           </div>
+          <div className="Settings-setting">
+            <label htmlFor="keyboard-setting">Keyboard layout:</label>
+            <select
+              name="keyboard-setting"
+              id="keyboard-setting"
+              value={keyboard}
+              onChange={(e) => setKeyboard(e.target.value)}
+            >
+              <option value="qwertyuiop-asdfghjkl-BzxcvbnmE">QWERTY</option>
+              <option value="azertyuiop-qsdfghjklm-BwxcvbnE">AZERTY</option>
+              <option value="qwertzuiop-asdfghjkl-ByxcvbnmE">QWERTZ</option>
+              <option value="BpyfgcrlE-aoeuidhtns-qjkxbmwvz">Dvorak</option>
+              <option value="qwfpgjluy-arstdhneio-BzxcvbkmE">Colemak</option>
+            </select>
+            <input
+              style={{ marginLeft: 20 }}
+              id="enter-left-setting"
+              type="checkbox"
+              checked={enterLeft}
+              onChange={() => setEnterLeft((x: boolean) => !x)}
+            />
+            <label htmlFor="enter-left-setting">"Enter" on left side</label>
+          </div>
         </div>
       )}
       <Game
         maxGuesses={maxGuesses}
         hidden={page !== "game"}
         difficulty={difficulty}
+        colorBlind={colorBlind}
+        keyboardLayout={keyboard.replaceAll(
+          /[BE]/g,
+          (x) => (enterLeft ? "EB" : "BE")["BE".indexOf(x)]
+        )}
       />
     </div>
   );
