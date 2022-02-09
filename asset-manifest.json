@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/awatlum/static/css/main.c72a7d90.css",
-    "main.js": "/awatlum/static/js/main.53e83a2d.js",
+    "main.css": "/awatlum/static/css/main.12e60549.css",
+    "main.js": "/awatlum/static/js/main.cea8413a.js",
     "index.html": "/awatlum/index.html",
-    "main.c72a7d90.css.map": "/awatlum/static/css/main.c72a7d90.css.map",
-    "main.53e83a2d.js.map": "/awatlum/static/js/main.53e83a2d.js.map"
+    "main.12e60549.css.map": "/awatlum/static/css/main.12e60549.css.map",
+    "main.cea8413a.js.map": "/awatlum/static/js/main.cea8413a.js.map"
   },
   "entrypoints": [
-    "static/css/main.c72a7d90.css",
-    "static/js/main.53e83a2d.js"
+    "static/css/main.12e60549.css",
+    "static/js/main.cea8413a.js"
   ]
 }
