@@ -1,9 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Row, RowState } from "./Row";
-import dictionary from "./dictionary.json";
 import { Clue, clue, describeClue, violation } from "./clue";
 import { Keyboard, ALL_LETTERS } from "./Keyboard";
-import targetList from "./targets.json";
 import {
   dictionarySet,
   Difficulty,
@@ -12,6 +10,8 @@ import {
   seed,
   speak,
   urlParam,
+  targets,
+  dictionary
 } from "./util";
 import { decode, encode } from "./base64";
 
@@ -27,7 +27,6 @@ interface GameProps {
   difficulty: Difficulty;
 }
 
-const targets = targetList.slice(0, targetList.indexOf("𒌑𒁕𒀊𒁀𒀊") + 1); // Words no rarer than this one
 const minWordLength = 3;
 const maxWordLength = 5;
 

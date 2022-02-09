@@ -1,6 +1,6 @@
 import { Clue, clueClass } from "./clue";
 
-import rawKeyboard from "./keyboard.json";
+import { rawKeyboard } from "./util";
 
 interface KeyboardProps {
   letterInfo: Map<string, Clue>;
@@ -30,7 +30,7 @@ export function Keyboard(props: KeyboardProps) {
             if (label === "X") {
               className += " Game-keyboard-button-placeholder";
             }
-            if (Array.from(label).length > 1) {
+            if (Array.from(label).length > 2) {
               className += " Game-keyboard-button-wide";
             }
             return (

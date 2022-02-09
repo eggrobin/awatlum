@@ -1,5 +1,5 @@
 import "./App.css";
-import { maxGuesses, seed } from "./util";
+import { dialect, maxGuesses, seed } from "./util";
 import Game from "./Game";
 import { useEffect, useState } from "react";
 import { About, appName } from "./About";
@@ -37,6 +37,7 @@ function App() {
 
   useEffect(() => {
     document.body.className = dark ? "dark" : "";
+    document.body.className += " " + dialect;
     setTimeout(() => {
       // Avoid transition on page load
       document.body.style.transition = "0.3s background-color ease-out";

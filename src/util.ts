@@ -1,4 +1,11 @@
-import dictionary from "./dictionary.json";
+﻿import oldbab_dictionary from "./oldbab_dictionary.json";
+import neoass_dictionary from "./neoass_dictionary.json";
+
+import oldbab_targetList from "./oldbab_targets.json";
+import neoass_targetList from "./neoass_targets.json";
+
+import oldbab_rawKeyboard from "./oldbab_keyboard.json";
+import neoass_rawKeyboard from "./neoass_keyboard.json";
 
 export enum Difficulty {
   Normal,
@@ -7,6 +14,18 @@ export enum Difficulty {
 }
 
 export const maxGuesses = 12;
+
+export const dialect = (urlParam("dialect") ?? "oldbab").toLowerCase()
+export const dictionary = dialect == "neoass"
+  ? neoass_dictionary
+  : oldbab_dictionary;
+export const targets = dialect == "neoass"
+  ? neoass_targetList.slice(0, neoass_targetList.indexOf("𒆠𒁉𒈠") + 1) // Words no rarer than this one
+  : oldbab_targetList.slice(0, oldbab_targetList.indexOf("𒌑𒁕𒀊𒁀𒀊") + 1);
+export const rawKeyboard = dialect == "neoass"
+  ? neoass_rawKeyboard
+  : oldbab_rawKeyboard;
+
 
 export const dictionarySet: Set<string> = new Set(dictionary);
 
