@@ -20,7 +20,7 @@ export const dictionary = dialect == "neoass"
   ? neoass_dictionary
   : oldbab_dictionary;
 export const targets = dialect == "neoass"
-  ? neoass_targetList.slice(0, neoass_targetList.indexOf("𒆠𒁉𒈠") + 1) // Words no rarer than this one
+  ? neoass_targetList.slice(0, neoass_targetList.indexOf("𒆠𒂊") + 1) // Words no rarer than this one
   : oldbab_targetList.slice(0, oldbab_targetList.indexOf("𒌑𒁕𒀊𒁀𒀊") + 1);
 export const rawKeyboard = dialect == "neoass"
   ? neoass_rawKeyboard
