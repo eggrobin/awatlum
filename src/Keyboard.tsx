@@ -3,6 +3,7 @@ import { Clue, clueClass } from "./clue";
 import { rawKeyboard } from "./util";
 
 interface KeyboardProps {
+  layout: string;
   letterInfo: Map<string, Clue>;
   onKey: (key: string) => void;
 }
@@ -15,8 +16,6 @@ KEYBOARD[KEYBOARD.length - 1].push("Enter");
 
 
 export function Keyboard(props: KeyboardProps) {
-
-
   return (
     <div className="Game-keyboard" aria-hidden="true">
       {KEYBOARD.map((row, i) => (

@@ -43,13 +43,13 @@ export function About() {
         <b>𒌝</b> and <b>𒈠</b> aren't in the target word at all.
       </p>
       <p>
-        <b className="green-bg">𒀀</b> is correct! The first sign is{" "}
-        <b className="green-bg">𒀀</b>
+        <b className={"green-bg"}>𒀀</b> is correct! The first sign is{" "}
+        <b className={"green-bg"}>𒀀</b>
         .<br />
         <strong>(There may still be a second 𒀀 in the word.)</strong>
       </p>
       <p>
-        <b className="yellow-bg">𒉡</b> occurs <em>elsewhere</em> in the target
+        <b className={"yellow-bg"}>𒉡</b> occurs <em>elsewhere</em> in the target
         word.
         <br />
         <strong>(Perhaps more than once. 🤔)</strong>
