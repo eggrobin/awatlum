@@ -67,9 +67,9 @@ if (initChallenge && !dictionarySet.has(initChallenge)) {
 
 function parseUrlLength(): number {
   const lengthParam = urlParam("length");
-  if (!lengthParam) return 5;
+  if (!lengthParam) return 4;
   const length = Number(lengthParam);
-  return length >= minLength && length <= maxLength ? length : 5;
+  return length >= minLength && length <= maxLength ? length : 4;
 }
 
 function parseUrlGameNumber(): number {
