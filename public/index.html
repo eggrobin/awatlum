@@ -27,9 +27,13 @@
     <title>𒀀𒉿𒀜𒈝</title>
     <script>
       // Use some nonstandard spelling with a probablity of one half.
-      let long_a = Math.random() < 1 - Math.SQRT1_2;
-      let cvc = Math.random() > 1 - Math.SQRT1_2;
-      document.title = `𒀀𒉿${long_a ? "𒀀" : ""}𒀜${cvc ? "𒈝" : "𒇻𒌝"}`;
+      if (new URLSearchParams(window.location.search).get("dialect").toLowerCase() == "neoass") {
+        document.title = `𒀀𒁍𒌓𒇻`;
+      } else {
+        let long_a = Math.random() < 1 - Math.SQRT1_2;
+        let cvc = Math.random() > 1 - Math.SQRT1_2;
+        document.title = `𒀀𒉿${long_a ? "𒀀" : ""}𒀜${cvc ? "𒈝" : "𒇻𒌝"}`;
+      }
     </script>
   </head>
   <body>

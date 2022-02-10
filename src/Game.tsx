@@ -4,6 +4,7 @@ import { Clue, clue, describeClue, violation } from "./clue";
 import { Keyboard, ALL_LETTERS } from "./Keyboard";
 import {
   describeSeed,
+  dialect,
   dictionarySet,
   Difficulty,
   pick,
@@ -99,7 +100,7 @@ function Game(props: GameProps) {
       : `Make your first guess!`
   );
   const currentSeedParams = () =>
-    `?seed=${seed}&length=${wordLength}&game=${gameNumber}`;
+    `?seed=${seed}&length=${wordLength}&game=${gameNumber}&dialect=${dialect}`;
   useEffect(() => {
     if (seed) {
       window.history.replaceState(
