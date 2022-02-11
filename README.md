@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 ﻿# 𒀀𒉿𒀜𒈝
 It’s [Wordle](https://www.powerlanguage.co.uk/wordle/) but for Old Babylonian Akkadian!
-=======
-# hello wordl
-
-It's [Wordle](https://www.powerlanguage.co.uk/wordle/) but you can play forever!
->>>>>>> chordbug/main
 
 Based on https://github.com/manishearth/ipadle, in turn based on https://github.com/lynn/hello-wordl.
 
@@ -41,14 +35,6 @@ Don't get me wrong: I, too, think this is the most brilliant aspect of Wordle, a
 ## My word contained two of the same letter!
 
 This can happen in Wordle too, and I give clues exactly the same way Wordle does. I think the game would be too easy if I got rid of double letters, so I won't.
-<<<<<<< HEAD
-=======
-
-## Where are the words coming from?
-
-To generate target words, I have been manually curating the top 25,000 or so entries of [Peter Norvig's English word frequency list](http://norvig.com/mayzner.html) to get rid of obscure words, plurals, conjugated verbs, inappropriate language, and British spellings (sorry). If you get dealt a strange target word, please open an issue on this here GitHub repository.
-
-To check guesses, I use some variation of the _Official Tournament and Club Word List_ used in North American Scrabble tournaments. (I'm not a native English speaker, but my English tends mostly American.)
 
 ## For developers
 
@@ -57,4 +43,3 @@ You're very welcome to create your own Wordle offshoot/remix based on _hello wor
 To run the code locally, first install [Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm). Then, in this directory, open a terminal and run `npm install` followed by `npm run start`. _hello wordl_ will be running at http://localhost:3000/. Any changes you make to the source code will be reflected there. Have fun!
 
 Finally, `npm run deploy` will deploy your code to the `gh-pages` branch of your fork, so that everyone can play your version at https://yourname.github.io/hello-wordl (or the name of your fork if you renamed it). 
->>>>>>> chordbug/main
