@@ -47,7 +47,7 @@ function App() {
     document.body.className = dark ? "dark" : "";
     document.body.className += " " + dialect;
     if (urlParam("today") !== null || urlParam("todas") !== null) {
-      document.location = "?seed=" + todaySeed;
+      document.location = "?seed=" + todaySeed + "&dialect=" + dialect;
     }
     setTimeout(() => {
       // Avoid transition on page load
@@ -89,7 +89,7 @@ function App() {
           visibility: page === "game" ? "visible" : "hidden",
         }}
       >
-        <a href={seed ? "?random" : "?seed=" + todaySeed}>
+        <a href={(seed ? "?random" : "?seed=" + todaySeed) + "&dialect=" + dialect}>
           {seed ? "Random" : "Today's"}
         </a>
       </div>

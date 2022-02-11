@@ -48,7 +48,8 @@ function getChallengeUrl(target: string): string {
     window.location.origin +
     window.location.pathname +
     "?challenge=" +
-    encode(target)
+    encode(target) +
+    "&dialect=" + dialect
   );
 }
 
