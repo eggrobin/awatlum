@@ -27,7 +27,7 @@
     <title>𒀀𒉿𒀜𒈝</title>
     <script>
       // Use some nonstandard spelling with a probablity of one half.
-      if (new URLSearchParams(window.location.search).get("dialect").toLowerCase() == "neoass") {
+      if ((new URLSearchParams(window.location.search).get("dialect") ?? "oldbab").toLowerCase() == "neoass") {
         document.title = `𒀀𒁍𒌓𒇻`;
       } else {
         let long_a = Math.random() < 1 - Math.SQRT1_2;
